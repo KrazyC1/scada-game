@@ -71,11 +71,11 @@ def main():
                 else:
                     print("Invalid choice.")
             elif action == "heal":
-                heal_cost = 5
+                heal_cost = 5 + level
                 if money >= heal_cost:
                     money -= heal_cost
-                    scada_health += 5
-                    print(f"You restored 5 health. SCADA Health: {scada_health}, Money left: ${money}")
+                    scada_health += 5 + level
+                    print(f"You restored {5 + level} health. SCADA Health: {scada_health}, Money left: ${money}")
                 else:
                     print("You don't have enough money!")
             else:
