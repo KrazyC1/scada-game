@@ -34,8 +34,10 @@ def main():
     ips_level = 0
 
     while scada_health > 0:
+        print("\n" + "=" * 50)
+        print(f"Round {level}: SCADA Health: {scada_health}, Money: ${money}")
         threat = spawn_threat(level)
-        print(f"\nA threat of level {threat.level} ({threat.name}) with {threat.health} health has appeared!")
+        print(f"A threat of level {threat.level} ({threat.name}) with {threat.health} health has appeared!")
 
         while threat.health > 0 and scada_health > 0:
             action = input("Type 'attack', 'upgrade', or 'heal': ")
